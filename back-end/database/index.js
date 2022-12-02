@@ -34,5 +34,23 @@ dataToBeSend.all = () => {
 
 }
 
+dataToBeSend.specificSerie = (id) => {
+
+
+	return new Promise((resolve, reject) => {
+
+		con.query(`SELECT * FROM series WHERE serieId = ${id}`, (err, results) => {
+
+			if (err) {
+				return reject(err);
+			}
+			return resolve(results);
+
+		});
+
+	});
+
+}
+
 module.exports = dataToBeSend;
 

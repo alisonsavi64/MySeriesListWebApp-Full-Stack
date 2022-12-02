@@ -7,10 +7,9 @@ function SerieCard(props) {
 		<>
 
 	
-				<div class="text-center text-white mx-1 mt-10 w-auto h-auto border-2 border-white-800">
+				<div class="text-center rounded-lg text-white mx-1 mt-10 w-auto h-auto border-2 border-white-800">
 
-					<h1>{props.title}</h1>
-					<img src={`data:image/${props.format};base64,${props.image}`}/>
+					<img class="w-96 h-48 rounded-lg" src={`data:image/${props.format};base64,${props.image}`}/>
 
 				</div>
 

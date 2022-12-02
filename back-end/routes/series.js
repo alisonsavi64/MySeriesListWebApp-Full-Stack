@@ -1,7 +1,7 @@
-const express = require('express')
-const db = require('../database')
+const express = require('express');
+const db = require('../database');
 
-const router = express.Router()
+const router = express.Router();
 
 router.get('/', async (req, res) => {
 	
@@ -12,10 +12,25 @@ router.get('/', async (req, res) => {
 
 	}catch (err){
 		console.log(err)
-		res.status(500).send({response: "Error"})
+		res.status(500).send({response: "Can't make the query to get all series"})
 	}
 	
 
-})
+});
 
-module.exports = router
+router.get('/:id', async(req, res) => {
+
+	try{
+
+		let results = await db.specificSerie(req.params.id);
+		res.json(results)
+
+	}catch(err) {
+
+		console.log(err)
+		res.status(500).send({response: "Can't make the query for specific serie"})
+	};
+
+});
+
+module.exports = router;

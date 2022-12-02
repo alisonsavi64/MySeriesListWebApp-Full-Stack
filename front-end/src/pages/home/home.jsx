@@ -1,9 +1,12 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
-import NavBar from '../../components/navbar/nav'
-import SerieCard from '../../components/series/seriecard'
-import Slider from '../../components/slider/slider'
+import NavBar from '../../components/navbar/nav';
+import SerieCard from '../../components/series/seriecard';
+import Slider from '../../components/slider/slider';
+import convertImage from '../../helpers/convertbyteimg';
+import Footer from '../../components/footer/footer';
 
 function Home() {
 
@@ -23,29 +26,25 @@ function Home() {
 
 	}, []);
 
-	function convertImage(img){
-
-		const base64String = btoa(String.fromCharCode(...new Uint8Array(img)));
-		return base64String
-
-	}
-
-
 	return (
 
 		<>
+			<div class="bg-gray-800">
+				<NavBar/>
+				<Slider/>
+				<div class="flex flex-wrap justify-center pb-44">
+					{series.map(serie => (
+						
+						<Link to={`/serie/${serie.serieId}`}>
 
-			<NavBar/>
-			<Slider/>
-			<div class="flex flex-wrap justify-center">
-				{series.map(serie => (
-					
-					<SerieCard title={serie.serieTitle} format={serie.serieFormatImage} image={convertImage(serie.serieLogo.data)}/>
-
-					)
-				)}
-				</div>
-			
+							<SerieCard format={serie.serieFormatImage} image={convertImage(serie.serieLogo.data)}/>
+						
+						</Link>
+						)
+					)}
+					</div>
+			<Footer/>
+			</div>
 		</>
 
 	);

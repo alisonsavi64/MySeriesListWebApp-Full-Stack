@@ -1,15 +1,16 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 function NavBar(){
 
 	return (
 		<>
-		<nav class="bg-yellow-800">
+		<nav class="bg-gray-800">
 			<div class="mx-auto max-w-7x1 px-2 sm:px-6 lg:px-8">
 				<div class="text-white flex h-16 py-3 text-lg justify-between">
 					<div class="py-1">
 						
-						<span class="p-px">LOGO</span>
+						<Link to="/"><span class="p-px">LOGO</span></Link>
 
 					</div>
 					<div>
