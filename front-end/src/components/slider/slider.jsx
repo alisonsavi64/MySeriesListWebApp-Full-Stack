@@ -44,12 +44,12 @@ function Slider(){
     <div class="carousel-item relative float-left w-full">
       <img
         src="https://eunaoseilogaritmo.com.br/wp-content/uploads/2020/02/thegoodplace.jpg"
-        class="block w-full h-96"
+        class="block w-full h-96 "
         alt="..."
       />
       <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl">Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5 class="text-xl">The Good Place</h5>
+        <p>A egocêntrica Eleanor morre e é enviada ao lado bom do Além por engano. Para continuar lá, ela se esforça para se tornar uma pessoa melhor.</p>
       </div>
     </div>
     <div class="carousel-item relative float-left w-full">
