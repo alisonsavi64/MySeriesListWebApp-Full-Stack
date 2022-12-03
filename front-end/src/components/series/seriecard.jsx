@@ -1,19 +1,21 @@
 import React from 'react';
+import convertImage from '../../helpers/convertbyteimg';
 
 function SerieCard(props) {
 
 	return (
 
 		<>
-
-	
-				<div class="text-center rounded-lg text-white mx-1 mt-10 w-auto h-auto border-2 border-white-800">
-
-					<img class="w-96 h-48 rounded-lg" src={`data:image/${props.format};base64,${props.image}`}/>
-
-				</div>
-
+				
+			<h1 class="text-white py-5 px-5 text-3xl">{props.genreTitle}</h1>	
+			<div class="flex overflow-x-auto">
+				{props.serieData.map(serie => (
+					
+						props.genreTitle === serie.serieGenre && <img class="w-96 h-64 border-2 mx-1" src={`data:image/${serie.serieFormatImage};base64,${convertImage(serie.serieLogo.data)}`}/> 
+					
+				))}
 			
+			</div>
 
 		</>
 

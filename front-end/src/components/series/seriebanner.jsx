@@ -21,7 +21,7 @@ function SerieBanner(props){
 
 				</div>
 
-				<div class="text-black h-96 px-44" >
+				<div class="text-black h-96" >
 					
 					<p>Temporadas: {props.seasons}</p>
 
