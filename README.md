@@ -1,7 +1,8 @@
 <h1>Em desenvolvimento</h1>
 <h1>Web App onde o usuário poderá criar um perfil com suas séries favoritas e seu progresso nelas</h1>
 
-![Website](https://user-images.githubusercontent.com/98917042/205442621-edcd63e3-b7aa-4ecb-a7c8-c5cf508336ed.png)
+![Website(1)](https://user-images.githubusercontent.com/98917042/205511042-644f7795-3257-4e73-8b53-d5e6db64281f.png)
+
 
 <h1>Sobre o projeto</h1>
 
